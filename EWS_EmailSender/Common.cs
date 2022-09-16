@@ -7,6 +7,7 @@ namespace EWS_EmailSender
         public static string UserEmail { get; set; } = "gregtest@kudurrustone.com";
         public static string Password { get; set; } = "Ab5%B2@6";
 
+        public static string Domain { get; set; } = "kudurrustone.com";
         public static string RecipientEmail { get; set; } = "vssaini.dev@gmail.com";
 
         public static void ShowMessage(string msg, bool error = false)

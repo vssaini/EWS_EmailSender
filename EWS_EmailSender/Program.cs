@@ -8,8 +8,8 @@ namespace EWS_EmailSender
         {
             try
             {
-                //SendEmailByEwsApi.SendEmail();
-                SendEmailByEA.SendEmail();
+                SendEmailByEwsApi.SendEmail();
+                //SendEmailByEA.SendEmail();
             }
             catch (Exception exc)
             {

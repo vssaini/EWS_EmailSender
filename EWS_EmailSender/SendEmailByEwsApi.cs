@@ -1,6 +1,7 @@
 ﻿using Microsoft.Exchange.WebServices.Data;
 using System;
 using System.Diagnostics;
+using System.Net;
 
 namespace EWS_EmailSender
 {
@@ -34,12 +35,14 @@ namespace EWS_EmailSender
                 //TraceFlags = TraceFlags.All
             };
 
+            service.CookieContainer = new CookieContainer();
+
             service.AutodiscoverUrl(Common.UserEmail, RedirectionUrlValidationCallback);
             watch.Stop();
 
             if (service.Url != null)
             {
-                Common.ShowMessage($"Connected to Exchange Service successfully in {watch.Elapsed.Seconds} seconds");
+                Common.ShowMessage($"Connected to Exchange Service successfully in {watch.Elapsed.Seconds} seconds.");
                 Console.WriteLine(Environment.NewLine);
             }
             else
